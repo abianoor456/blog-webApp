@@ -3,6 +3,7 @@ import BlogPost from '../blogPost/blogPost';
 import { blogData } from '../../blog-data';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import NavigationBar from '../navgigationBar/navigationBar';
 
 const Home = () => {
     const [blogs, setBlogs] = useState(blogData);
@@ -13,16 +14,19 @@ const Home = () => {
 
     console.log(blogs)
     return (
-        <div className='blogs-page'>
-            <span className='page-title'>Latest</span>
-            <div className='blogs-container'>
-                {blogs.map((blog) => {
-                    return (
-                        <BlogPost blog={blog} ></BlogPost>
-                    )
-                })}
-            </div>
-        </div >
+        <div className='home-page'>
+            <NavigationBar></NavigationBar>
+            <div className='blogs-page'>
+                <span className='page-title'>Latest</span>
+                <div className='blogs-container'>
+                    {blogs.map((blog) => {
+                        return (
+                            <BlogPost blog={blog} ></BlogPost>
+                        )
+                    })}
+                </div>
+            </div >
+        </div>
     )
 }
 

@@ -1,0 +1,43 @@
+.Nav-Bar{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 95px;
+    height: 100vh;
+    gap: 30px 10px;
+    padding-top: 20px;
+
+    .profile-picture-container{
+        display: flex;
+        flex-direction: column;
+        .profile-picture{
+            align-self: center;
+        }
+    }
+
+    .search-bar-container{
+        display: flex;
+        flex-direction: column;
+        .search-bar-icon{
+            align-self: center;
+        }
+        .search-bar-text{
+            margin-top: 5px;
+            text-align: center;
+        }
+    }
+
+    .create-blog-container{
+        display: flex;
+        flex-direction: column;
+        .create-blog-icon{
+            align-self: center;
+        }
+        .create-blog-text{
+            margin-top: 5px;
+            color:white;
+            text-align: center;
+        }
+    }
+}
+
