@@ -1,0 +1,21 @@
+.blogs-page{
+    display: flex;
+    flex-direction: column;
+    .blogs-container{
+        margin-top:118.14px ;
+    }
+    .page-title{
+        height: 25px;
+        width: 61px;
+        position: absolute;
+        left: 188.46533203125px;
+        top: 49.22607421875px;
+        border-radius: nullpx;
+        font-family: Lexend Deca;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
