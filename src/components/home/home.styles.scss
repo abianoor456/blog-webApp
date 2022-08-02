@@ -1,6 +1,6 @@
 .blogs-page{
     margin-left: 1.5%;
-
+   
     .blogs-container{
         margin-top:2% ;
     }
@@ -12,10 +12,10 @@
         font-weight: 400;
         line-height: 25px;
         text-align: left;
-    }
+    }   
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1100px)  {
     .blogs-page{
         margin-left: 6%;
     }
@@ -32,8 +32,10 @@
 }
 
 @media screen and (max-width: 500px) {
-    .blogs-page{
-        margin-left: 12%;
-    }
+    .blogs-page{ 
+        margin-left: 2%;
+        margin-bottom:100px;
+
+        }
     
 }

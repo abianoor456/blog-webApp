@@ -57,10 +57,13 @@
 
 @media (max-width:500px){
     .Nav-Bar{
-        width: 65px;
-        width: 100vh;
-        height: 30px;
+        width: 100%;
+        height: 100px;
         display: flex;
         flex-direction: row;
-    } 
+        gap: 25%;
+        bottom: 0;
+        justify-content: space-evenly;
+    }
 }
+
