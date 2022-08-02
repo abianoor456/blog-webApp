@@ -1,14 +1,14 @@
 import './navigationBar.styles.scss'
 import { ReactComponent as SearchIcon } from '../../assets/Nav-Icons.svg';
-import { ReactComponent as ProfilePicture } from '../../assets/Ellipse 1.svg';
 import { ReactComponent as AddCircle } from '../../assets/add_circle.svg';
 
-const NavigationBar = ({ }) => {
-
+const NavigationBar = () => {
     return (
         <div className='Nav-Bar'>
             <div className='profile-picture-container'>
-                <ProfilePicture className='profile-picture' ></ProfilePicture>
+                <div className='profile-picture' >
+                    <p className='profile-picture-text'>S</p>
+                </div>
             </div>
             <div className='search-bar-container'>
                 <SearchIcon className='search-bar-icon'></SearchIcon>

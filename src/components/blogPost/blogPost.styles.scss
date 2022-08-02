@@ -1,50 +1,98 @@
 .blog-card{
     display: flex;
     flex-direction: column;
-    margin-left: 188px;
-   
     .date{
-        height: 30.863006591796875px;
-        width: 88.63555145263672px;    
-        border-radius: nullpx;
         font-family: Lexend Deca;
         font-size: 1.5rem;
         font-weight: 600;
-        line-height: 30px;
-        letter-spacing: 0em;
-        text-align: left;
+        line-height: 1.875rem;
+        text-align: left;  
     }
 
     .blog-title{
-        height: 44px;
-        width: 887px;
-        border-radius: nullpx;
-        font-family: DM Serif Display;
-        font-size: 32px;
+        width: 100%;
+        font-family: 'DM Serif Display';
+        font-size: 2rem;
         font-weight: 400;
-        line-height: 44px;
-        letter-spacing: 0em;
+        line-height: 1.78rem;
         text-align: left;
         color: #56CC6A;
-      
     }
 
-    .blog-body{
-        height: 154px;
-        width: 876px;
-        border-radius: nullpx;
+    .blog-body{  
+        width: 100%;
+        margin-bottom: 4%;
         font-family: Lexend Deca;
         font-size: 1.25rem;
         font-weight: 200;
         line-height: 25px;
-        letter-spacing: 0em;
         text-align: left;       
     }
 
     img {
-        width: 887px;
-        height: 500px;
-        margin-bottom: 8px;
+        height: 30%;
+        object-fit: contain;
+        margin-bottom: 3%;
+        align-self: flex-start;
       }
     
+}
+
+@media (max-width:1100px){
+    .blog-card{
+     
+        .date{
+            font-size: 1.35rem;
+            line-height: 1.6rem;
+            margin-bottom: 2%;
+        }
+        .blog-title{
+            font-size: 1.85rem;
+            line-height: 1.5rem;
+        }
+        .blog-body{
+            font-size: 1.18rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+
+@media (max-width:900px){
+    .blog-card{
+     
+        .date{
+            font-size: 1.25rem;
+            line-height: 1.6rem;
+            margin-bottom: 2%;
+        }
+        .blog-title{
+            font-size: 1.75rem;
+            line-height: 1.5rem;
+        }
+        .blog-body{
+            font-size: 1.15rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+@media (max-width:550px){
+    .blog-card{
+       
+        .date{
+            font-size: 1rem;
+            line-height: 1.6rem;
+            margin-bottom: 2%;
+        }
+        .blog-title{
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+        .blog-body{
+            font-size: 1rem;
+            font-weight: 200;
+            line-height: 1.25rem;
+        }
+    }
 }

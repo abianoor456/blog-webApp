@@ -6,7 +6,7 @@ const BlogPost = ({ blog }) => {
     return (
         <div className='blog-card'>
             <span className='date'>{date}</span>
-            <span className='blog-title'>{title}</span>
+            <p className='blog-title'>{title}</p>
             <img src={imageUrl} alt={`${id}`}></img>
             <span className='blog-body'>{body}</span>
         </div>

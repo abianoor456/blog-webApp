@@ -1,26 +1,39 @@
 .blogs-page{
-    display: flex;
-    flex-direction: column;
+    margin-left: 1.5%;
+
     .blogs-container{
-        margin-top:118.14px ;
+        margin-top:2% ;
     }
     .page-title{
-        height: 25px;
-        width: 61px;
-        position: absolute;
-        left: 260px;
-        top: 49.22607421875px;
-        border-radius: nullpx;
-        font-family: Lexend Deca;
+        margin-top: 2%;
+        font-family: 'Lexend Deca';
         font-size: 20px;
+        font-style: normal;
         font-weight: 400;
         line-height: 25px;
-        letter-spacing: 0em;
         text-align: left;
     }
 }
 
-.home-page{
-    display: flex;
-    flex-direction: row;
+@media screen and (max-width: 1100px) {
+    .blogs-page{
+        margin-left: 6%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .blogs-page{
+        margin-left: 9%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .blogs-page{
+        margin-left: 12%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogs-page{
+        margin-left: 12%;
+    }
+    
 }

@@ -4,6 +4,8 @@ import { blogData } from '../../blog-data';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import NavigationBar from '../navgigationBar/navigationBar';
+import { Row, Col } from 'antd';
+import "antd/dist/antd.css";
 
 const Home = () => {
     const [blogs, setBlogs] = useState(blogData);
@@ -12,20 +14,22 @@ const Home = () => {
         setBlogs(blogData);
     }, blogData)
 
-    console.log(blogs)
     return (
-        <div className='home-page'>
-            <NavigationBar></NavigationBar>
-            <div className='blogs-page'>
-                <span className='page-title'>Latest</span>
-                <div className='blogs-container'>
-                    {blogs.map((blog) => {
-                        return (
-                            <BlogPost blog={blog} ></BlogPost>
-                        )
-                    })}
-                </div>
-            </div >
+        <div >
+            <Row gutter={[8, 8]}>
+                <Col span={2}> <NavigationBar></NavigationBar></Col>
+                <Col span={18} >
+                    <div className='blogs-page'>
+                        <p className='page-title'>Latest</p>
+                        <div className='blogs-container'>
+                            {blogs.map((blog) => {
+                                return (
+                                    <BlogPost blog={blog} ></BlogPost>
+                                )
+                            })}
+                        </div>
+                    </div ></Col>
+            </Row>
         </div>
     )
 }
