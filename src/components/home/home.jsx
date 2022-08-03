@@ -19,10 +19,12 @@ const Home = () => {
     const isMobileScreen = useMediaQuery({ query: '(max-width: 500px)' })
     return (
         <div >
-            {!isMobileScreen ? (<Row className='row-one-home-page' gutter={[8, 8]}>
-                <Col span={2}> <NavigationBar /></Col>
-                <Col span={18} ><BlogsPage blogs={blogs} /></Col>
-            </Row>) : (
+            {!isMobileScreen ? (
+                <Row className='row-one-home-page' gutter={[8, 8]}>
+                    <Col span={2}> <NavigationBar /></Col>
+                    <Col span={18} ><BlogsPage blogs={blogs} /></Col>
+                </Row>
+            ) : (
                 <div>
                     <Row className='row-two-home-page' gutter={[16, 16]}>
                         <Col span={24}><BlogsPage blogs={blogs} /></Col>
