@@ -1,3 +1,13 @@
+.row-one-home {
+margin-right: 0 !important;
+}
+.row-one-home-page {
+    margin-right: 0 !important;
+}
+.row-two-home-page {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
 .blogs-page{
     margin-left: 1.5%;
    
@@ -33,7 +43,7 @@
 
 @media screen and (max-width: 500px) {
     .blogs-page{ 
-        margin-left: 2%;
+        margin-left: 0;
         margin-bottom:100px;
 
         }

@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div >
             {!isMobileScreen ? (<Row className='row-one-home-page' gutter={[8, 8]}>
-                <Col span={2}> <NavigationBar></NavigationBar></Col>
+                <Col span={2}> <NavigationBar /></Col>
                 <Col span={18} >
                     <div className='blogs-page'>
                         <p className='page-title'>Latest</p>
