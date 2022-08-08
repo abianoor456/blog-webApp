@@ -1,24 +1,21 @@
 import './home.styles.scss'
-import BlogPost from '../blogPost/blogPost';
 import BlogsPage from '../blogsPage/blogsPage';
-import { blogData } from '../../blog-data';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import NavigationBar from '../navgigationBar/navigationBar';
-import { Row, Col } from 'antd';
+import { Row, Col, Button } from 'antd';
 import "antd/dist/antd.css";
 import { useMediaQuery } from 'react-responsive'
+import { useContext } from 'react'
+import { BlogContext } from '../../context/blog.context'
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
-
-const Home = () => {
-    const [blogs, setBlogs] = useState(blogData);
-    useEffect(() => {
-        setBlogs(blogData);
-    }, blogData)
+const Home = ({ signOut, user }) => {
+    const { blogs } = useContext(BlogContext);
 
     const isMobileScreen = useMediaQuery({ query: '(max-width: 500px)' })
     return (
         <div >
+            <Button onClick={signOut}>sign out</Button>
             {!isMobileScreen ? (
                 <Row className='row-one-home-page' gutter={[8, 8]}>
                     <Col span={2}> <NavigationBar /></Col>
@@ -38,4 +35,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default withAuthenticator(Home);
