@@ -6,11 +6,10 @@ import { SearchContext } from '../../context/search.context'
 import { useState } from 'react';
 import AddPost from '../addPost/addPost';
 
-const NavigationBar = () => {
+const NavigationBar = (props) => {
+    console.log('props:', props.authState);
     const { setDisplaySearchBar, displaySearchBar, resetSearchStr } = useContext(SearchContext);
-    let subtitle;
     const [modalIsOpen, setIsOpen] = useState(false);
-    console.log('modalIsOpen', modalIsOpen);
 
     const customStyles = {
         content: {
