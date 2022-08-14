@@ -1,15 +1,23 @@
 import './navigationBar.styles.scss'
 import { ReactComponent as SearchIcon } from '../../assets/Nav-Icons.svg';
 import { ReactComponent as AddCircle } from '../../assets/add_circle.svg';
+import { ReactComponent as LogoutIcon } from '../../assets/logout-svgrepo-com .svg';
 import { useContext } from 'react'
 import { SearchContext } from '../../context/search.context'
 import { useState } from 'react';
 import AddPost from '../addPost/addPost';
+import { Button } from 'antd';
+import { Auth } from 'aws-amplify';
+import { CurrentUserContext } from '../../context/currentUser.context'
+import { useNavigate } from 'react-router-dom';
 
-const NavigationBar = (props) => {
-    console.log('props:', props.authState);
+
+const NavigationBar = () => {
+    const navigate = useNavigate();
     const { setDisplaySearchBar, displaySearchBar, resetSearchStr } = useContext(SearchContext);
     const [modalIsOpen, setIsOpen] = useState(false);
+
+    const { setCurrentUser } = useContext(CurrentUserContext);
 
     const customStyles = {
         content: {
@@ -41,6 +49,15 @@ const NavigationBar = (props) => {
         if (!toggle) resetSearchStr();
     }
 
+    const logOutHandler = async () => {
+        try {
+            await Auth.signOut();
+            setCurrentUser(null);
+            navigate('/log-in');
+        } catch (error) {
+            console.log('error signing out: ', error);
+        }
+    }
 
 
     return (
@@ -59,6 +76,9 @@ const NavigationBar = (props) => {
                 <span className='create-blog-text'>create</span>
             </div>
             {modalIsOpen && <AddPost modalIsOpen={modalIsOpen} closeModal={closeModal} customStyles={customStyles} />}
+            <div className='sign-out-btn-container' onClick={logOutHandler} >
+                <LogoutIcon className='sign-out-icon' />
+            </div>
         </div>
     )
 }
