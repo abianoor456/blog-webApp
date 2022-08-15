@@ -71,7 +71,6 @@ const SignIn = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
         await signUp({ email, password });
-        //resetFormFields();
     }
 
     async function confirmSignUp(event) {

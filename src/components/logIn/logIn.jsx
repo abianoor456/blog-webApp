@@ -6,14 +6,9 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 async function signIn(username, password) {
-
     try {
-        const user = await Auth.signIn(username, password);
-        console.log('logged in user:', user);
-        const groups = user.signInUserSession.accessToken.payload["cognito:groups"];
-        console.log('user groups are:', groups);
+        await Auth.signIn(username, password);
         const authenticatedUser = await Auth.currentAuthenticatedUser();
-        console.log('auth user:', authenticatedUser);
         return authenticatedUser;
     } catch (error) {
         console.log('error signing in', error);

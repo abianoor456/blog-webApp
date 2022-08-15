@@ -1,15 +1,13 @@
 import './home.styles.scss'
 import BlogsPage from '../blogsPage/blogsPage';
 import NavigationBar from '../navgigationBar/navigationBar';
-import { Row, Col, Button } from 'antd';
+import { Row, Col } from 'antd';
 import "antd/dist/antd.css";
 import { useMediaQuery } from 'react-responsive'
 import { useContext } from 'react'
 import { BlogContext } from '../../context/blog.context'
-import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { Authenticator } from 'aws-amplify-react';
-import { useState } from 'react';
+
 
 const Home = () => {
     const { blogs } = useContext(BlogContext);
@@ -34,7 +32,6 @@ const Home = () => {
                     </Row>
                 </div>
             )}
-            <NavigationBar></NavigationBar>
         </div>
     )
 }
