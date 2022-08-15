@@ -7,6 +7,7 @@
     gap: 30px 10px;
     padding-top: 20px;
     position: fixed;
+    
 
     .profile-picture-container{  
         display: flex;
@@ -30,6 +31,7 @@
     }
 
     .search-bar-container{
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         .search-bar-icon{
@@ -51,6 +53,19 @@
             margin-top: 5px;
             color:white;
             text-align: center;
+        }
+    }
+
+    .sign-out-btn-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        .sign-out-icon{
+            align-self: center;
+            margin-left: -7px;
+            width: 45px;
+            height: 50px;
         }
     }
 }
